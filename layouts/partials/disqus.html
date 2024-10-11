@@ -1,0 +1,12 @@
+{{ with .Site.Params.disqus }}
+<div id="disqus_thread"></div>
+<script defer>
+(function() {
+    var d = document, s = d.createElement('script');
+    s.src = '//{{.}}.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Por favor habilite JavaScript para ver el <a href="https://disqus.com/?ref_noscript">comentarios impulsados ​​por Disqus.</a></noscript>
+{{ end }}
